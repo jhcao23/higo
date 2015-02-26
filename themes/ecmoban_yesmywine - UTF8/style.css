@@ -85,7 +85,7 @@ Logo filename: logo.gif
 .goodslist .promo-icon ins { display:block; width:43px; height:43px; margin-bottom:5px; line-height:40px; font-size:14px; text-align:center; background:url(images/icon_promo_8.png) no-repeat; _background:url(images/goodslist/icon_promo_8_ie6.png) no-repeat; color:#fff; text-decoration:none; font-family:微软雅黑; }
 .goodslist .promo-icon ins em { font-weight:400; font-style:normal; }
 .goodslist .promo-icon ins.xin   { text-indent:-10000px; overflow:hidden; background-position:left -86px; }   /*新品*/
-.goodslist .promo-icon ins.mian  { text-indent:-10000px; overflow:hidden; background-position:left -129px; }  /*包邮*//
+.goodslist .promo-icon ins.mian  { text-indent:-10000px; overflow:hidden; background-position:left -129px; }  /*包邮*/
 .goodslist .promo-icon ins.shen  { text-indent:-10000px; overflow:hidden; background-position:left -172px; }  /*神器*/
 .goodslist .promo-icon ins.jian  { text-indent:-10000px; overflow:hidden; background-position:right 0; }      /*立减*/
 .goodslist .promo-icon ins.zeng  { text-indent:-10000px; overflow:hidden; background-position:right -43px; }  /*买赠*/
@@ -407,7 +407,7 @@ pre { white-space:pre-wrap; white-space:-moz-pre-wrap; white-space:-pre-wrap; wh
 article, aside, dialog, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video, details, summary { margin:0; padding:0; border:0; outline:0; font-size:100%; vertical-align:baseline; background:transparent; }
 article, aside, dialog, figure, footer, header, hgroup, nav, section, figcaption, details, summary { display:block; }
 * html, * html body { background-image:url(about:blank);background-attachment:fixed; }
-* html { zoom:expression(function(ele){ele.style.zoom="1";document.execCommand("BackgroundImageCache", false, true);}(this)); }
+/** html { zoom:expression(function(ele){ele.style.zoom="1";document.execCommand("BackgroundImageCache", false, true);}(this)); }*/
 * html pre { word-wrap:break-word; white-space:normal; }
 /*== common style ==*/
 .bold { font-weight:bold; }
@@ -10624,9 +10624,6 @@ p.send-note a {
 
 .text_indent_10 h3 {text-indent:10px;}
 
-
-
-@charset "utf-8";
 form {
     float: none;
     width: auto;

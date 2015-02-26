@@ -535,6 +535,8 @@ function order_weight_price($order_id)
 /**
  * 获得订单中的费用信息
  *
+ * Updated by Touch Mars Solutions Inc.
+ * 
  * @access  public
  * @param   array   $order
  * @param   array   $goods
@@ -562,7 +564,7 @@ function order_fee($order, $goods, $consignee)
                     'discount'         => 0,
                     'pack_fee'         => 0,
                     'card_fee'         => 0,
-                    'shipping_fee'     => 0,
+                    'shipping_fee'     => 0,    //update shipping_fee calculation strategy
                     'shipping_insure'  => 0,
                     'integral_money'   => 0,
                     'bonus'            => 0,
@@ -583,6 +585,18 @@ function order_fee($order, $goods, $consignee)
 
         $total['goods_price']  += $val['goods_price'] * $val['goods_number'];
         $total['market_price'] += $val['market_price'] * $val['goods_number'];
+                
+        //Touch Mars Solutions::sum up shipping fee for different shipping-category
+        //we need to find out how many shipping-category and for each shipping-category, how many goods
+        //that's why we need to create a new table category_shipping, and assign each goods one category_shipping
+        //sometimes one shipping-category has waiver-max: when total product purchase is over the waiver-max, 
+        //shipping fee is set to 0.
+        if($total['real_goods_count']==1){
+            $total['shipping_fee']=10;
+        }else if($total['real_goods_count']>1){
+            $total['shipping_fee']+=5;
+        }
+        
     }
 
     $total['saving']    = $total['market_price'] - $total['goods_price'];

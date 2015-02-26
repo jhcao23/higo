@@ -631,5 +631,5 @@ span.best {
 				.pages a.next { padding: 0 15px; }
 		.pages kbd { border-left: 1px solid #E6E6E2; margin: 0; }
 			* html .pages kbd { padding: 1px 8px; }
-			.pages kbd input { border: 1px solid #E6E6E2; margin-top: 3px !important; * > margin-top: 1px  !important; margin: 1px 4px 0 3px; padding: 0 2px; height: 17px; }
+			.pages kbd input { border: 1px solid #E6E6E2; margin-top: 3px !important;  margin-top: 1px  !important; margin: 1px 4px 0 3px; padding: 0 2px; height: 17px; }
 				.pages kbd>input { margin-bottom: 2px; }
